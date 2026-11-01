@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "reel"
+version = "1.0.0"
+description = "A retro terminal picker for usenet movies and TV: search, pick the exact release with the arrow keys, done."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = ["windows-curses>=2.3; sys_platform == 'win32'"]
+classifiers = [
+    "Environment :: Console :: Curses",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: MacOS",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+]
+
+[project.urls]
+Homepage = "https://github.com/voidharbor/reel"
+
+[project.scripts]
+reel = "reel.cli:main"
+
+[tool.setuptools]
+packages = ["reel"]
